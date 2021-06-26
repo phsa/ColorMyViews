@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ColorMyViews</string>
+
+    <string name="main_label_box_one">Box One</string>
 </resources>
