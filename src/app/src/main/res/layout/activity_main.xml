@@ -1,24 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    >
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/text_boxOne"
+        style="@style/WhiteBoxStyle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/spacing_normal"
         android:layout_marginHorizontal="@dimen/spacing_normal"
+        android:layout_marginTop="@dimen/spacing_normal"
         android:padding="@dimen/spacing_tiny"
-        android:text="@string/main_label_box_one"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:text="@string/main_label_boxOne"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_boxTwo"
+        style="@style/WhiteBoxStyle"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="@dimen/spacing_normal"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:text="@string/main_label_boxTwo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_boxOne" />
+
+    <TextView
+        android:id="@+id/text_boxThree"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_normal"
+        android:text="@string/main_label_boxThree"
+        app:layout_constraintStart_toEndOf="@+id/text_boxTwo"
+        app:layout_constraintTop_toTopOf="@+id/text_boxTwo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/text_boxFour"
+        style="@style/WhiteBoxStyle"
+        />
+
+    <TextView
+        android:id="@+id/text_boxFour"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_normal"
+        android:layout_marginVertical="@dimen/spacing_normal"
+        android:text="@string/main_label_boxFour"
+        app:layout_constraintStart_toEndOf="@+id/text_boxTwo"
+        app:layout_constraintTop_toBottomOf="@+id/text_boxThree"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/text_boxFive"
+        style="@style/WhiteBoxStyle"
+        />
+
+    <TextView
+        android:id="@+id/text_boxFive"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/spacing_normal"
+        android:text="@string/main_label_boxFive"
+        app:layout_constraintStart_toEndOf="@+id/text_boxTwo"
+        app:layout_constraintTop_toBottomOf="@+id/text_boxFour"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/text_boxTwo"
         style="@style/WhiteBoxStyle"
         />
 
