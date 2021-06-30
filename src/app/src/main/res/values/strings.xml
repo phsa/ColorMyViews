@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">ColorMyViews</string>
 
+    <!-- MainActivity STRINGS -->
     <string name="main_label_boxOne">Box One</string>
     <string name="main_label_boxTwo">Box Two</string>
     <string name="main_label_boxThree">Box Three</string>
@@ -9,4 +10,6 @@
     <string name="main_label_red">RED</string>
     <string name="main_label_yellow">YELLOW</string>
     <string name="main_label_green">GREEN</string>
+    <string name="main_label_howToPlay">How to play:</string>
+    <string name="main_info_howToPlay">Tap the screen and buttons</string>
 </resources>

@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- FONT SIZES -->
-    <dimen name="box_text_size">24sp</dimen>
+    <!-- TYPICAL FONT SIZES -->
+    <dimen name="textSize_medium">24sp</dimen>
+
+    <!-- SPECIFIC FONT SIZES -->
+    <dimen name="textSize_boxes">@dimen/textSize_medium</dimen>
 
     <!-- TYPICAL SPACINGS -->
     <dimen name="spacing_normal">16dp</dimen>
