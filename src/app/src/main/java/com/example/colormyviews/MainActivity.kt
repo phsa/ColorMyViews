@@ -1,9 +1,9 @@
 package com.example.colormyviews
 
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.example.colormyviews.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setListeners() {
-        val clickableViews: List<View> = listOf(
+        listOf(
             binding.textBoxOne,
             binding.textBoxTwo,
             binding.textBoxThree,
@@ -28,30 +28,32 @@ class MainActivity : AppCompatActivity() {
             binding.buttonRed,
             binding.buttonYellow,
             binding.buttonGreen
-        )
-
-        for (v in clickableViews) {
-            v.setOnClickListener { makeColored(it) }
+        ).forEach { textBox ->
+            textBox.setOnClickListener {
+                makeColored(it)
+            }
         }
     }
 
     private fun makeColored(view: View) {
         when(view.id) {
             // Boxes using Color class colors for background
-            R.id.text_boxOne -> view.setBackgroundColor(Color.DKGRAY)
-            R.id.text_boxTwo -> view.setBackgroundColor(Color.GRAY)
+            R.id.text_boxOne -> view.setBackgroundColor(Color.parseColor(ColorProvider.hexColor()))
+            R.id.text_boxTwo -> view.setBackgroundColor(Color.parseColor(ColorProvider.hexColor()))
 
             // Boxes using Android colors resources for background
-            R.id.text_boxThree -> view.setBackgroundResource(android.R.color.holo_green_light)
-            R.id.text_boxFour -> view.setBackgroundResource(android.R.color.holo_green_dark)
-            R.id.text_boxFive -> view.setBackgroundResource(android.R.color.holo_green_light)
+            R.id.text_boxThree -> view.setBackgroundColor(Color.parseColor(ColorProvider.hexColor()))
+            R.id.text_boxFour -> view.setBackgroundColor(Color.parseColor(ColorProvider.hexColor()))
+            R.id.text_boxFive -> view.setBackgroundColor(Color.parseColor(ColorProvider.hexColor()))
 
             // Boxes using custom colors for background
-            R.id.button_red -> binding.textBoxThree.setBackgroundResource(R.color.red)
-            R.id.button_yellow -> binding.textBoxFour.setBackgroundResource(R.color.yellow)
-            R.id.button_green -> binding.textBoxFive.setBackgroundResource(R.color.green)
+            R.id.button_red ->  binding.textBoxThree.setBackgroundColor(Color.parseColor(ColorProvider.hexColor()))
+            R.id.button_yellow -> binding.textBoxFour.setBackgroundColor(Color.parseColor(ColorProvider.hexColor()))
+            R.id.button_green -> binding.textBoxFive.setBackgroundColor(Color.parseColor(ColorProvider.hexColor()))
 
             else -> view.setBackgroundColor(Color.LTGRAY)
         }
+
+
     }
 }
