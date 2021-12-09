@@ -1,6 +1,5 @@
 package com.example.colormyviews
 
-import android.util.Log
 import kotlin.math.floor
 
 class ColorProvider {
