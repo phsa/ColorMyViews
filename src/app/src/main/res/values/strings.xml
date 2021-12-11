@@ -7,9 +7,11 @@
     <string name="main_label_boxThree">Box Three</string>
     <string name="main_label_boxFour">Box Four</string>
     <string name="main_label_boxFive">Box Five</string>
-    <string name="main_label_red">RED</string>
-    <string name="main_label_yellow">YELLOW</string>
-    <string name="main_label_green">GREEN</string>
+    <string name="main_label_boxSix">Box Six</string>
+    <string name="main_label_boxSeven">Box Seven</string>
+    <string name="main_label_boxEight">Box Eight</string>
+    <string name="main_label_boxNine">Box Nine</string>
+    <string name="main_label_boxTen">Box Ten</string>
     <string name="main_label_howToPlay">How to play:</string>
-    <string name="main_info_howToPlay">Tap the screen and buttons</string>
+    <string name="main_info_howToPlay">Tap the screen</string>
 </resources>

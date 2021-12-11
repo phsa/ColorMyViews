@@ -24,10 +24,14 @@ class MainActivity : AppCompatActivity() {
             binding.textBoxThree,
             binding.textBoxFour,
             binding.textBoxFive,
+            binding.textBoxSix,
+            binding.textBoxSeven,
+            binding.textBoxEight,
+            binding.textBoxNine,
+            binding.textBoxTen,
+            binding.textBoxEleven,
+            binding.textBoxTwelve,
             binding.containerMain,
-            binding.buttonRed,
-            binding.buttonYellow,
-            binding.buttonGreen
         ).forEach { textBox ->
             textBox.setOnClickListener {
                 makeColored(it)
@@ -37,21 +41,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun makeColored(view: View) {
         when(view.id) {
-            // Boxes using Color class colors for background
-            R.id.text_boxOne -> view.setBackgroundColor(Color.parseColor(ColorProvider.aestheticallyRandomHexColor()))
-            R.id.text_boxTwo -> view.setBackgroundColor(Color.parseColor(ColorProvider.randomHexColor()))
-
-            // Boxes using Android colors resources for background
-            R.id.text_boxThree -> view.setBackgroundColor(Color.parseColor(ColorProvider.aestheticallyRandomHexColor()))
-            R.id.text_boxFour -> view.setBackgroundColor(Color.parseColor(ColorProvider.aestheticallyRandomHexColor()))
-            R.id.text_boxFive -> view.setBackgroundColor(Color.parseColor(ColorProvider.aestheticallyRandomHexColor()))
-
-            // Boxes using custom colors for background
-            R.id.button_red ->  binding.textBoxThree.setBackgroundColor(Color.parseColor(ColorProvider.aestheticallyRandomHexColor()))
-            R.id.button_yellow -> binding.textBoxFour.setBackgroundColor(Color.parseColor(ColorProvider.aestheticallyRandomHexColor()))
-            R.id.button_green -> binding.textBoxFive.setBackgroundColor(Color.parseColor(ColorProvider.aestheticallyRandomHexColor()))
-
-            else -> view.setBackgroundColor(Color.LTGRAY)
+            R.id.container_main -> view.setBackgroundColor(Color.LTGRAY)
+            else -> view.setBackgroundColor(Color.parseColor(ColorProvider.aestheticallyRandomHexColor()))
         }
 
 
